@@ -1,0 +1,10 @@
+.next
+commitlint.config.*
+metro.config.ts
+metro.config.js
+babel.config.js
+node_modules
+package-lock.json
+public
+src/api/**/*
+yarn.lock
