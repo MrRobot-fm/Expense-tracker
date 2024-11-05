@@ -1,3 +1,4 @@
+import { HeaderGoBackButton } from "@/components/HeaderGoBackButton/HeaderGoBackButton";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
@@ -21,6 +22,16 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          animation: "slide_from_bottom",
+          presentation: "containedModal",
+          headerBackVisible: true,
+          headerLeft: ({ tintColor }) => <HeaderGoBackButton tintColor={tintColor} />,
+        }}
+      />
     </Stack>
   );
 }
